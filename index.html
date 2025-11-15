@@ -6,6 +6,7 @@
     <title>Paletería Dulce Frío</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -14,16 +15,15 @@
         <a class="navbar-brand fs-3 fw-bold text-danger" href="#"
           >🍭 Dulce Frío</a
         >
-
         <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
@@ -39,75 +39,389 @@
         </div>
       </div>
     </nav>
-
     <!-- Hero -->
     <header class="bg-danger text-white text-center py-5">
       <h1 class="fw-bold">Las mejores paletas artesanales</h1>
       <p class="lead">Frescas, deliciosas y hechas con amor ❤️</p>
       <a href="#productos" class="btn btn-light btn-lg mt-3">Ver productos</a>
     </header>
-
     <!-- Productos -->
     <section id="productos" class="container py-5">
-      <h2 class="text-center mb-4 fw-bold">Nuestras paletas más vendidas</h2>
+      <h2 class="text-center mb-4 fw-bold">Nuestros sabores</h2>
 
       <div class="row g-4">
-        <!-- Producto 1 -->
+        <!-- 1 -->
         <div class="col-md-4">
           <div class="card shadow">
             <img
-              src="https://imgs.search.brave.com/BKBqq_QkodIBVypVgjQYcQdNU-eP5QxlRRW6murA60c/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jaXRy/b2ZydXQuY29tL2lt/YWdlcy9mcnVpdHMv/cGVyc2lhbi9jaXRy/b2ZydXQtbGltb24t/cGVyc2EtcHJlb2Nl/c28ud2VicA?w=600"
+              title="Sabor Fresa"
+              src="https://images.pexels.com/photos/429807/pexels-photo-429807.jpeg?w=600"
               class="card-img-top"
-              alt="Paleta de fresa"
             />
             <div class="card-body text-center">
-              <h5 class="card-title">Paleta de Fresa</h5>
-              <p class="card-text">
-                Ácida, fresca y perfecta para cualquier ocasión.
-              </p>
-              <button class="btn btn-danger">Comprar $20</button>
+              <h5 class="card-title">Fresa</h5>
+              <p>Clásica y dulce, hecha con fresa natural.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Fresa', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Mango"
+              src="https://images.pexels.com/photos/918643/pexels-photo-918643.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Mango</h5>
+              <p>Un sabor tropical refrescante.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Mango', 20)"
+              >
+                Agregar
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- Producto 2 -->
+        <!-- 3 -->
         <div class="col-md-4">
           <div class="card shadow">
             <img
-              src="https://imgs.search.brave.com/79tfMa3dt2qgTOaFdGRIdOFf-UE2ELMaFk8RxqqbCWQ/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE0/ODIzNTY3Mi9waG90/by93aG9sZS1yaXBl/LW1hbmdvLXdpdGgt/bGVhZi1vbi15ZWxs/b3ctYmFja2dyb3Vu/ZC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9MmZhQWl6MkN0/WWM0UXA4cjVYc1VC/WFBzLUJic1NWclN2/S3k3bV9EODB2ND0?w=600"
+              title="Sabor Limón"
+              src="https://images.pexels.com/photos/2363347/pexels-photo-2363347.jpeg?w=600"
               class="card-img-top"
-              alt="Paleta de mango"
             />
             <div class="card-body text-center">
-              <h5 class="card-title">Paleta de Mango</h5>
-              <p class="card-text">
-                Sabor tropical intenso, ideal para el calor.
-              </p>
-              <button class="btn btn-danger">Comprar $20</button>
+              <h5 class="card-title">Limón</h5>
+              <p>Ácida y perfecta para el calor.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Limón', 20)"
+              >
+                Agregar
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- Producto 3 -->
+        <!-- 4 -->
         <div class="col-md-4">
           <div class="card shadow">
             <img
-              src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=600"
+              title="Sabor Sandía"
+              src="https://images.pexels.com/photos/1313267/pexels-photo-1313267.jpeg?w=600"
               class="card-img-top"
-              alt="Paleta de fresa"
             />
             <div class="card-body text-center">
-              <h5 class="card-title">Paleta de Fresa</h5>
-              <p class="card-text">
-                Hecha con fresas naturales. Dulce y refrescante.
-              </p>
-              <button class="btn btn-danger">Comprar $20</button>
+              <h5 class="card-title">Sandía</h5>
+              <p>Refrescante y totalmente veraniega.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Sandía', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Piña"
+              src="https://images.pexels.com/photos/4110334/pexels-photo-4110334.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Piña</h5>
+              <p>Dulce, jugosa y con sabor natural.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Piña', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Coco"
+              src="https://images.pexels.com/photos/5899685/pexels-photo-5899685.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Coco</h5>
+              <p>Suave, cremosa y con ralladura real.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Coco', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Vainilla"
+              src="https://images.pexels.com/photos/4963318/pexels-photo-4963318.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Vainilla</h5>
+              <p>Clásica y cremosa, perfecta para todos.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Vainilla', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Chocolate"
+              src="https://images.pexels.com/photos/4110094/pexels-photo-4110094.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Chocolate</h5>
+              <p>Espesa, dulce y hecha con cacao real.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Chocolate', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Tamarindo"
+              src="https://images.pexels.com/photos/15095868/pexels-photo-15095868.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Tamarindo</h5>
+              <p>Agridulce y favorita en México.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Tamarindo', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Nuez"
+              src="https://images.pexels.com/photos/7420737/pexels-photo-7420737.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Nuez</h5>
+              <p>Cremosa con trocitos de nuez real.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Nuez', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Grosella"
+              src="https://images.pexels.com/photos/9009957/pexels-photo-9009957.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Grosella</h5>
+              <p>Dulce, vibrante y llena de color.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Grosella', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Guayaba"
+              src="https://images.pexels.com/photos/5945797/pexels-photo-5945797.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Guayaba</h5>
+              <p>Suave y perfumada, muy mexicana.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Guayaba', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Uva"
+              src="https://images.pexels.com/photos/5946082/pexels-photo-5946082.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Uva</h5>
+              <p>Dulce, ligera y muy refrescante.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Uva', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              title="Sabor Chicle"
+              src="https://images.pexels.com/photos/7232907/pexels-photo-7232907.jpeg?w=600"
+              class="card-img-top"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Chicle</h5>
+              <p>Ideal para niños, colorida y divertida.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Chicle', 20)"
+              >
+                Agregar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="col-md-4">
+          <div class="card shadow">
+            <img
+              src="https://images.pexels.com/photos/3252137/pexels-photo-3252137.jpeg?w=600"
+              class="card-img-top"
+              title="Sabor Galleta"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title">Oreo</h5>
+              <p>Cremosa con galleta molida.</p>
+              <p>Comprar por $20</p>
+              <button
+                type="button"
+                class="btn btn-danger"
+                onclick="addToCart('Oreo', 20)"
+              >
+                Agregar
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    <section class="container py-5">
+      <h2 class="fw-bold text-center mb-4">Carrito de compras</h2>
+      <div class="table-danger">
+        <table class="table table-bordered text-center align-middle">
+          <thead class="table-danger">
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cart-body"></tbody>
+        </table>
+      </div>
+      <div class="text-end">
+        <h3>Total: $<span id="cart-total">0</span></h3>
+        <button
+          type="button"
+          class="btn btn-secondary mt-2"
+          onclick="clearCart()"
+        >
+          Vaciar carrito
+        </button>
+      </div>
+    </section>
     <!-- Contacto -->
     <section id="contacto" class="bg-light py-5">
       <div class="container text-center">
